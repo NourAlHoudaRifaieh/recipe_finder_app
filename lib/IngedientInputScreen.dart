@@ -47,18 +47,18 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
       appBar: AppBar(
         backgroundColor: Colors.teal,
         title: Text("What's in your kitchen?",
-          style:TextStyle(color:Colors.white),
+          style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold),
         ),
         centerTitle: true,
       ),
       body: Padding (
-        padding: EdgeInsets.symmetric(horizontal:60, vertical:25),
+        padding: EdgeInsets.symmetric(horizontal:60, vertical:30 ),
         child:Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextField(
               controller: myController,
-              style: TextStyle(fontSize: 16, color: Colors.black),
+              style: TextStyle(fontSize: 16, color: Colors.black, ),
               decoration:InputDecoration(
                 hintText:"Add an ingrediant.....",
                 prefixIcon: Icon(Icons.search),
@@ -78,6 +78,7 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
                 });
               }
             ),
+
             SizedBox(height:16),
             Text("Your Ingrediants: ", style: TextStyle(fontSize: 16, color: Colors.teal),),
             SizedBox(height:16),
@@ -88,7 +89,15 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
               runSpacing:8,
               children: myIngredients.map((item){
                 return Chip(
-                  label: Text(item),
+                  backgroundColor: Colors.white,
+                  label: Text(
+                            item,
+                            style: TextStyle(
+                              color: Colors.teal,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
                   onDeleted: (){
                     setState(() {
                       myIngredients.remove(item);
@@ -101,7 +110,7 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
             Spacer(),
 
            Padding(
-             padding:EdgeInsets.only(bottom:16),
+             padding:EdgeInsets.only(bottom:200),
              child:ElevatedButton(
                  onPressed: (){},
                  style:ElevatedButton.styleFrom(
