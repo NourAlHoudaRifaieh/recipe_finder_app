@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_finder_app/recipe_results_screen.dart';
+import 'recipe_results_screen.dart';
 
 class IngredientInputScreen extends StatefulWidget {
   IngredientInputScreen({Key? key}) : super(key: key);
@@ -112,7 +114,14 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
            Padding(
              padding:EdgeInsets.only(bottom:200),
              child:ElevatedButton(
-                 onPressed: (){},
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(
+                       builder: (context) => RecipeResultsScreen(myIngredients),
+                     ),
+                   );
+                 },
                  style:ElevatedButton.styleFrom(
                    backgroundColor:Colors.teal,
                    minimumSize: Size(double.infinity, 50),
