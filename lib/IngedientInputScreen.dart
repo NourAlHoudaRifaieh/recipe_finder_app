@@ -11,12 +11,12 @@ class IngredientInputScreen extends StatefulWidget {
   }
 }
 
-class _IngredientInputScreenState extends State<IngredientInputScreen> {
+  class _IngredientInputScreenState extends State<IngredientInputScreen> {
 
   List<String> myIngredients =[];
   TextEditingController myController = TextEditingController();
 
-  //to add an new ingredient
+  //to add a new ingredient
   void addIngredient(String value){
     if (value.trim() == "") return;
     setState(() {
@@ -53,6 +53,7 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
         ),
         centerTitle: true,
       ),
+
       body: Padding (
         padding: EdgeInsets.symmetric(horizontal:60, vertical:30 ),
         child:Column(
@@ -93,13 +94,13 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
                 return Chip(
                   backgroundColor: Colors.white,
                   label: Text(
-                            item,
-                            style: TextStyle(
-                              color: Colors.teal,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold
-                            ),
-                          ),
+                    item,
+                    style: TextStyle(
+                      color: Colors.teal,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
                   onDeleted: (){
                     setState(() {
                       myIngredients.remove(item);
@@ -111,25 +112,25 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
 
             Spacer(),
 
-           Padding(
+            Padding(
              padding:EdgeInsets.only(bottom:200),
              child:ElevatedButton(
-                 onPressed: (){
-                   Navigator.push(
-                     context,
-                     MaterialPageRoute(
-                       builder: (context) => RecipeResultsScreen(myIngredients),
-                     ),
-                   );
-                 },
-                 style:ElevatedButton.styleFrom(
-                   backgroundColor:Colors.teal,
-                   minimumSize: Size(double.infinity, 50),
-                 ),
-                 child: Text(
-                   "Find Recipes",
-                   style:TextStyle(color:Colors.white, fontSize:16),
-                 ),
+               onPressed: (){
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(
+                     builder: (context) => RecipeResultsScreen(myIngredients),
+                   ),
+                 );
+               },
+               style:ElevatedButton.styleFrom(
+                 backgroundColor:Colors.teal,
+                 minimumSize: Size(double.infinity, 50),
+               ),
+               child: Text(
+                 "Find Recipes",
+                 style:TextStyle(color:Colors.white, fontSize:16),
+               ),
            ),
            ),
         ],
