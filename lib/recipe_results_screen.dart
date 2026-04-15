@@ -56,13 +56,13 @@ class RecipeResultsScreen extends StatelessWidget {
                           height: 180,
                           width: double.infinity,
                           fit: BoxFit.cover,
-                          errorBuilder: (context, error, stackTrace) {
-                            return Container(
-                              height: 180,
-                              color: Colors.grey[200],
-                              child: Icon(Icons.fastfood, size: 60, color: Colors.grey),
-                            );
-                          },
+                          // errorBuilder: (context, error, stackTrace) {
+                          //   return Container(
+                          //     height: 180,
+                          //     color: Colors.grey[200],
+                          //     child: Icon(Icons.fastfood, size: 60, color: Colors.grey),
+                          //   );
+                          // },
                         ),
                       ),
                       Positioned(

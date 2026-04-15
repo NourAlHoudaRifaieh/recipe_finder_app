@@ -46,7 +46,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
         title: Text(
           widget.recipe.name,
           style: TextStyle(
-            color:Colors.white, fontSize:16
+            color:Colors.white, fontSize:16, fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -82,6 +82,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                       ),
                     ),
                     SizedBox(height:8),
+
                     Row(
                       children: [
                         Icon(Icons.timer, size: 16, color: Colors.grey),
@@ -171,17 +172,17 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                       }),
                     ),
 
-                    SizedBox(height:8),
+                    SizedBox(height:18),
 
                     Text(
-                      "Cooling Instructions",
+                      "Cooking Instructions",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
 
-                    SizedBox(height:8),
+                    SizedBox(height:18),
 
                     Column(
                       children: List.generate(widget.recipe.steps.length, (index){
@@ -224,7 +225,34 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                       }),
                     ),
 
-                    SizedBox(height: 20),
+                    SizedBox(height: 18),
+
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: (){
+                          Navigator.pop(context);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.teal,
+                          minimumSize: Size(
+                            double.infinity,
+                            50
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                        ),
+                        child: Text(
+                          "Start Cooking",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize:16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
 
                   ],
                 ),
