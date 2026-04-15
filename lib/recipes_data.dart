@@ -5,7 +5,7 @@ List<Recipe> allRecipes =[
   Recipe(
     id: '1',
     name:"Creamy Tomato Pasta",
-    image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500",
+    image:"https://munchingwithmariyah.com/wp-content/uploads/2023/08/IMG_4836.jpg",
     time:25,
     servings:4,
     difficulty:"Easy",
@@ -30,7 +30,7 @@ List<Recipe> allRecipes =[
   Recipe(
     id: '2',
     name:"Grilled Chicken with herbs",
-    image: "https://images.unsplash.com/photo-1598103442097-8b74394b95c4?w=500",
+    image: "https://www.feastingathome.com/wp-content/uploads/2021/06/Grilled-lemon-Herb-Chicken-17.jpg",
     time:30,
     servings:2,
     difficulty:"Medium",
@@ -54,7 +54,7 @@ List<Recipe> allRecipes =[
   Recipe(
     id: '3',
     name:"Vegetable Stir Fry",
-    image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500",
+    image:"https://ohsweetbasil.com/wp-content/uploads/the-best-easy-stir-fry-vegetables-recipe-6-480x270.jpg",
     time:20,
     servings:3,
     difficulty:"Easy",
@@ -78,7 +78,7 @@ List<Recipe> allRecipes =[
   Recipe(
     id: '4',
     name:"Classic Omelette",
-    image: "https://images.unsplash.com/photo-1510693206972-df098062cb71?w=500",
+    image: "https://cdn11.bigcommerce.com/s-otmh7tu94l/product_images/uploaded_images/omelette.jpg",
     time:10,
     servings:1,
     difficulty:"Easy",
@@ -100,8 +100,8 @@ List<Recipe> allRecipes =[
 
   Recipe(
     id: '5',
-    name: "garlic Bread",
-    image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?w=500",
+    name: "Garlic Bread",
+    image: "https://t4.ftcdn.net/jpg/04/95/26/55/360_F_495265563_fuXU7CT1Xrc3FJEBwU8PGwXUlXufsFkq.jpg",
     time:15,
     servings:4,
     difficulty:"Easy",
