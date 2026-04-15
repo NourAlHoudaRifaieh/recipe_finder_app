@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_finder_app/IngedientInputScreen.dart';
 import 'recipe.dart';
 
 
@@ -224,32 +225,6 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                     ),
 
                     SizedBox(height: 20),
-
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                        onPressed: (){},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.teal,
-                          minimumSize: Size(
-                            double.infinity,
-                            50
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                        ),
-                        child: Text(
-                          "Start Cooking",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize:16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-
 
                   ],
                 ),
